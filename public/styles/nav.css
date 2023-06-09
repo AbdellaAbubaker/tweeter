@@ -1,0 +1,41 @@
+nav {
+    height: 120px;
+    width: 100%;
+    background-color: #4056A1;
+    color: #ffffff;
+    font-family: 'Bungee', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5em;
+    box-sizing: border-box;
+    position: fixed;
+ 
+  
+    }
+
+    nav span {
+        display: inline-block;
+        margin-right: 1em;
+       
+      }
+      
+      nav i {
+        display: inline-block;
+        font-size: 16px;
+        
+      }
+
+      
+      header div {
+        text-align: center;
+      }
+    
+
+      .avatar {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+          }
+      
