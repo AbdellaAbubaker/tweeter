@@ -34,4 +34,15 @@ nav .tweeter-logo {
   margin: 0 auto;
   background-color: #f4f1ec;
   color: #0085cc;
+  
  }
+ .counter.invalid {
+  color: red;
+}
+
+.i {
+
+  display:flex;
+  justify-content: center;
+  background-color: orange;
+}

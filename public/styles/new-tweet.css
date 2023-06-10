@@ -1,37 +1,117 @@
-.new-tweet {
-    background-color: #f5f8fa;
-    padding: 1rem;
-    border-radius: 5px;
+section.new-tweet button {
+    background-color: #4056A1;
+    font-family: 'Bungee', sans-serif;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.new-tweet h2 {
-font-size: 1.5rem;
-margin-bottom: 1rem
-}
-
-.new-tweet label {
-    font-weight: bold;
+section.new-tweet {
+    background-color: #FFFFFF;
+    border-radius: 0;
+    padding: 2em;
+    width: 100%;
+    margin: 2em auto;
+    text-align: left;
+  }
+  
+  section.new-tweet h2 {
+    font-family: 'Bungee', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    text-align: left;
+    color: #6474ab;
+  
   }
 
-  .new-tweet textarea {
+  section.new-tweet label {
+    color: #8694ce;
+  }
+
+  section.new-tweet output {
+    color: #919ec2;
+    float: right;
+    padding: -1em - 1em
+  }
+
+
+  section.new-tweet textarea {
+    font-family: 'Bungee', sans-serif;
     width: 100%;
     height: 100px;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    resize: vertical;
+    margin-bottom: 1em;
+    padding: 1em;
+    box-sizing: border-box;
+    border: none;
+    box-shadow: 10px, 10px, 10px, 10px;  
+    border-radius: 10px;
+    resize: none;
+  }
+  
+  .tweet {
+    width: 100%;
+    background: white;
+    margin: 0 auto;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.1);
+    float: right;
+  }
+  
+  .tweet header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    color: #FFFFFF
+  
+  }
+  
+  .tweet header h3 {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+  
+  .tweet footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+  }
+  
+  .tweet footer div {
+    display: flex;
+    align-items: center;
+  }
+  
+  .tweet footer div span {
+    font-size: 0.8em;
+    color: #999;
+    margin-right: 1em;
   }
 
-  new-tweet button[type="submit"] {
-    background-color: #1da1f2;
-    color: white;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
+
+  .tweet footer div i {
+    color: #999;
     cursor: pointer;
   }
   
-  .new-tweet .counter {
-    color: gray;
-    font-size: 0.8rem;
+  .tweet p {
+    font-size: 1.2em;
+    margin-top: 1em;
+  }
+
+  i.fa-retweet:hover {
+    color: green;
+  }
+  
+  i.fa-heart:hover {
+    color: red;
+  }
+  
+  i.fa-envelope:hover {
+    color: blue;
   }
   
