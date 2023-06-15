@@ -19,18 +19,28 @@
 
 
     <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css">
+    <link rel="stylesheet" href="styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="styles/new-tweet.css" type="text/css">
     
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    </script>
+
+
+
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="scripts/client.js"></script>
     <script type="text/javascript" src="scripts/composer-char-counter.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
   </head>
 
@@ -60,27 +70,16 @@
             <div>
               <button type="submit">Tweet</button>
               <output name="counter" class="counter" for="tweet-text">140</output>
+              <span class="timeago" data-timestamp="1623667941000"></span>
             </div>
           </form>
         </section>
     <!-- Page-specific (main) content here -->
-    <section class="tweet-container">
-      <article class="tweet">
-        <header>
-        </header>
-        <footer>
-          <div>
-            <i class="fas fa-retweet"></i>
-
-            <i class="far fa-heart"></i>
-            
-           <i class="far fa-envelope"></i>
-          </div>
-        </footer>
-      </article>
+    <section class="tweets-container">
     </section>
     </main>
       
   </body>
+  
 
 </html>

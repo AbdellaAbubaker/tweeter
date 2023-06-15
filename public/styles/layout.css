@@ -25,9 +25,9 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-nav .tweeter-logo {
+/* nav .tweeter-logo {
   font-family: "Bungee"
-}
+} */
 
  main.container {
   width: 90%;
@@ -40,9 +40,3 @@ nav .tweeter-logo {
   color: red;
 }
 
-.i {
-
-  display:flex;
-  justify-content: center;
-  background-color: orange;
-}

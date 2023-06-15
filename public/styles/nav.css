@@ -14,28 +14,4 @@ nav {
   
     }
 
-    nav span {
-        display: inline-block;
-        margin-right: 1em;
-       
-      }
-      
-      nav i {
-        display: inline-block;
-        font-size: 16px;
-        
-      }
-
-      
-      header div {
-        text-align: center;
-      }
     
-
-      .avatar {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            justify-content: center;
-          }
-      
