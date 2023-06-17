@@ -15,3 +15,9 @@ nav {
     }
 
     
+    #error-container {
+      color: red;
+      font-weight: bold;
+      margin-top: 5px;
+      /* Hide the error container by default */
+    }

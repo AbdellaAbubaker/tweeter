@@ -47,16 +47,14 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
-      <span>Write a new tweet <i class="fas fa-angle-double-down"></i></span>
+      <span >tweeter</span>
+      <span class="write-tweet">Write a new tweet <i class="fas fa-angle-double-down"></i></span>
 
     </nav>
-    <header>
-      <div>
+    <div id="mobile-view">
+    <header id="site-header">
+      <div id="profile-site">
           <img id="avatar" src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
           <h2>Your Name</h2>
       </div>
   </header>
@@ -65,12 +63,14 @@
     <section class="new-tweet">
           <h2>Compose Tweet</h2>
           <form>
+            <div class="error-container" style="display: none;"></div>
             <label for="tweet-text">What are you humming about?</label>
             <textarea name="text" id="tweet-text"></textarea>
             <div>
-              <button type="submit">Tweet</button>
               <output name="counter" class="counter" for="tweet-text">140</output>
-              <span class="timeago" data-timestamp="1623667941000"></span>
+              <button type="submit">Tweet</button>
+              
+              <span class="timeago" tweet-time="1623667941000"></span>
             </div>
           </form>
         </section>
@@ -78,6 +78,7 @@
     <section class="tweets-container">
     </section>
     </main>
+  </div>
       
   </body>
   

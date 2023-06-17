@@ -4,26 +4,44 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+
 const createTweetElement = function (tweet) {
     const { user, content, created_at } = tweet;
     const $tweet = $(`
-      <article class="tweet">
-        <header>
+    <article class="tweet">
+    <header>
+      <div class="user-info">
+        <div class="avatar-container">
           <img src="${user.avatars}" />
-          <h2>${$("<div>").text(user.name).html()}</h2>
-          <p>${$("<div>").text(user.handle).html()}</p>
-          <p>${$("<div>").text(content.text).html()}</p>
-        </header>
-        <p class="tweet-created-at" data-time="${timeago.format(created_at)}"></p>
-        <div>
-          <i class="fas fa-retweet"></i>
-          <i class="far fa-heart"></i>
-          <i class="far fa-envelope"></i>
         </div>
-      </article>
+        <div class="name-container">
+          <h2>${$("<div>").text(user.name).html()}</h2>
+        </div>
+      </div>
+      <div class="handle-container">
+        <p>${$("<div>").text(user.handle).html()}</p>
+      </div> 
+    </header>
+    <div class="content-container">
+      <p>${$("<div>").text(content.text).html()}</p>
+    </div>
+    <div class="time-ago">
+      <p>${$("<div>").text(timeago.format(created_at)).html()}</p>
+    </div>
+    
+    
+    <div class="icon-container">
+      <i class="fas fa-retweet"></i>
+      <i class="far fa-heart"></i>
+      <i class="far fa-envelope"></i>
+    </div>
+  </article>
+
     `);
     return $tweet;
   };
+
+  
   
   const renderTweets = function (tweets) {
     tweets.forEach((tweet) => {
@@ -43,15 +61,15 @@ const createTweetElement = function (tweet) {
       const textarea = $("#tweet-text");
       const content = textarea.val();
       if (!content || content.trim() === "") {
-        alert("Please enter a tweet");
+        showError("Please enter a tweet");
         return;
       }
-  
+      
       if (content.length > 140) {
-        alert("Tweet content is too long. Maximum allowed is 140 characters.");
+        showError("Tweet content is too long. Maximum allowed is 140 characters.");
         return;
       }
-      alert("Tweet submitted successfully");
+      clearError();
   
       var formData = $(this).serialize();
   
@@ -61,15 +79,33 @@ const createTweetElement = function (tweet) {
         data: formData,
         success: function (data) {
           loadTweets();
+        },
+        error: function (xhr, status, error) {
+          showError("An error occurred while submitting the tweet. Please try again later.");
         }
       });
     });
   
     loadTweets();
+    $(".write-tweet").click(function(){
+      $(".new-tweet").slideDown()
+    }) 
+
+    
   });
   
-
-
+  function showError(message) {
+    const $errorContainer = $(".error-container");
+    $errorContainer.text(message);
+    $errorContainer.slideDown(); // Show the error container with sliding animation
+  }
+  
+  function clearError() {
+    const $errorContainer = $(".error-container");
+    $errorContainer.text("");
+    $errorContainer.hide(); // Hide the error container
+  }
+  
  
 // 1. Targeting right element 
 // 2. Make sure there are typo 
