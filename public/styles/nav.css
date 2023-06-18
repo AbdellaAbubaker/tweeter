@@ -10,8 +10,6 @@ nav {
     padding: 1.5em;
     box-sizing: border-box;
     position: fixed;
- 
-  
     }
 
     
@@ -19,5 +17,4 @@ nav {
       color: red;
       font-weight: bold;
       margin-top: 5px;
-      /* Hide the error container by default */
     }

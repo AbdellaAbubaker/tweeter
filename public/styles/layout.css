@@ -40,9 +40,9 @@ body {
   color: red;
 }
 
-i.fa-angle-double-down {
+#arrow-animation {
   color: red;
-  animation: animate 1s linear infinite
+  margin-left: 100px;
 }
 
 @media only screen and (max-width: 700px) {
